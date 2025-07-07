@@ -21,7 +21,8 @@ function App() {
         className={`w-full flex object-cover object-center ${imgLoaded ? '' : 'hidden'}`}
         onLoad={() => setImgLoaded(true)}
       />
-      <h1 className='text-3xl text-center mt-4'>Coming Soon...</h1>
+      <a href="#">Contact us at info@onola.org</a>
+      {/* <h1 className='text-3xl text-center mt-4'>Coming Soon...</h1> */}
      
       </div>
      </div>
