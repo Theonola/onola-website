@@ -2,6 +2,7 @@
 import logo from '../assets/Onola.png'
 import { useState } from 'react'
 import { Skeleton } from '../components/ui/skeleton'
+import Hero from '@/custom-components/Hero'
 
 function Home() {
   const [imgLoaded, setImgLoaded] = useState(false)
@@ -9,6 +10,9 @@ function Home() {
 
   return (
     <>
+    <div>
+      <Hero/>
+    </div>
      <div className=' flex justify-center items-center h-screen'>
       <div className='flex flex-col max-w-[300px]  mx-auto justify-center items-center '>
       {!imgLoaded && (
