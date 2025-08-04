@@ -3,6 +3,9 @@ import logo from '../assets/Onola.png'
 import { useState } from 'react'
 import { Skeleton } from '../components/ui/skeleton'
 import Hero from '@/custom-components/Hero'
+import AboutComponent from '@/custom-components/AboutComponent'
+import ThematicAreasContainer from '@/custom-components/ThematicAreasContainer'
+
 
 function Home() {
   const [imgLoaded, setImgLoaded] = useState(false)
@@ -13,6 +16,12 @@ function Home() {
     <div>
       <Hero/>
     </div>
+    <div>
+      <AboutComponent/>
+    </div>
+    <div className='py-12'>
+<ThematicAreasContainer />
+      </div>
      <div className=' flex justify-center items-center h-screen'>
       <div className='flex flex-col max-w-[300px]  mx-auto justify-center items-center '>
       {!imgLoaded && (
@@ -28,6 +37,7 @@ function Home() {
       {/* <h1 className='text-3xl text-center mt-4'>Coming Soon...</h1> */}
      
       </div>
+      
      </div>
     </>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonComponent from './ButtonComponent';
 
-
+import image from '../assets/health.jpg'
 const Hero = () => {
   //bg-amber-100 
   return (
@@ -19,17 +19,25 @@ const Hero = () => {
             
         </article>
         <div className="flex-1 flex justify-center items-center md:h-[90%] md:w-1/2 w-full order-1 md:order-2 h-full">
-          <video
-            src="https://res.cloudinary.com/dbm6niakh/video/upload/v1752161020/5407870_Coll_wavebreak_People_3840x2160_sziwwc.mp4"
-            className="rounded-lg shadow-sm w-full h-60 md:h-full object-cover max-w-xl"
-            controls
-            autoPlay
-            loop
-            muted
-            poster="/video-poster.jpg"
-          >
-            Sorry, your browser does not support embedded videos.
-          </video>
+          <div className="relative w-full h-60 md:h-full max-w-xl flex items-center justify-center group">
+            <video
+              src="https://res.cloudinary.com/dbm6niakh/video/upload/v1752747962/Add_a_subheading.mp4_zzhba5.mp4"
+              className="rounded-lg shadow-sm w-full h-full object-cover"
+              controls
+              autoPlay
+              loop
+              muted
+              poster="/video-poster.jpg"
+            >
+              Sorry, your browser does not support embedded videos.
+            </video>
+            <span
+              className="absolute bottom-2 left-2 bg-black/60 text-white text-xs md:text-sm font-medium px-2 py-1 rounded select-none pointer-events-none"
+            >
+              Play to see why we created Onola
+            </span>
+          </div>
+          {/* <img src={image} alt="health" className='rounded-md shadow-lg'/> */}
         </div>
       </div>
     </section>
