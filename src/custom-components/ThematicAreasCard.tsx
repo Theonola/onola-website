@@ -3,34 +3,37 @@ import type { IconType } from 'react-icons'
 const ThematicAreas = ({
   service,
   description,
-  icon: Icon,
-  color,
-  background,
+img,
+  
+  
 }: {
   service: string
   description: string
-  icon: IconType
+  img: string
   color?: string
-  background?: string
+  background?: string 
 }) => {
   {
-    console.log(color)
+   
   }
   return (
-    <div className='flex bg-[#fff]  shadow-[0_-6px_24px_0_rgba(0,0,0,0.12)] hover:shadow-2xl flex-col p-4  w-full  md:w-[280px] h-[300px] hover:scale-105 transition-all duration-300 ease-in-out rounded-lg'>
-      <div className='flex flex-col'>
-        <div className='flex flex-col  rounded-full  mx-auto items-center h-12 w-12 justify-center' style={{ background: "var(--primary-yellow)" }}>
+    <div className='flex  flex-col   w-full    hover:scale-105 transition-all duration-300 ease-in-out '>
+      <div className='flex flex-col relative w-full md:w-[300px] h-full'>
+        {/* <div className='flex flex-col  rounded-full  mx-auto items-center h-12 w-12 justify-center' style={{ background: "var(--primary-yellow)" }}>
           <Icon
             className={`text-2xl text-[#fff]`}
             style={{ color: color }}
           />
-        </div>
-        <h4 className='text-center  mt-4 font-bold text-[#4b5563]'>
-          {service}
+        </div> */}
+        <img src={img} alt=""  className='w-full  object-contain object-center'/>
+        <article className=' bg-white w-full absolute -bottom-4 left-0 md:-bottom-15 md:left-10 right-0 px-4 py-2 md:w-[300px] h-[120px]'>
+        <h4 className='  mt-4 font-bold text-[var(--primary-yellow)]'>
+          {service} 
         </h4>
-        <p className=' mt-0 tracking-wide text-center text-sm text-[#6b7280]'>
-          {description}
+        <p className=' mt-0 tracking-wide  text-sm text-[#6b7280]'>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi sapiente dolores fuga, id repellendus 
         </p>
+        </article>
       </div>
     </div>
   )

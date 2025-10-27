@@ -5,7 +5,8 @@ import { Skeleton } from '../components/ui/skeleton'
 import Hero from '@/custom-components/Hero'
 import AboutComponent from '@/custom-components/AboutComponent'
 import ThematicAreasContainer from '@/custom-components/ThematicAreasContainer'
-
+import { BlogSlider } from '@/custom-components/BlogSlider'
+import EventCardContainer from '@/custom-components/EventContainer'
 
 function Home() {
   const [imgLoaded, setImgLoaded] = useState(false)
@@ -21,6 +22,12 @@ function Home() {
     </div>
     <div className='py-12'>
 <ThematicAreasContainer />
+      </div>
+      <div>
+<BlogSlider />
+      </div>
+      <div className='py-12'>
+<EventCardContainer />
       </div>
      <div className=' flex justify-center items-center h-screen'>
       <div className='flex flex-col max-w-[300px]  mx-auto justify-center items-center '>
