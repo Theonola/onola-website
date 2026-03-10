@@ -3,39 +3,47 @@ import type { IconType } from 'react-icons'
 const ThematicAreas = ({
   service,
   description,
-img,
-  
-  
+  Icon,
 }: {
   service: string
   description: string
-  img: string
-  color?: string
-  background?: string 
+  Icon?: IconType
 }) => {
-  {
-   
-  }
   return (
-    <div className='flex  flex-col   w-full    hover:scale-105 transition-all duration-300 ease-in-out '>
-      <div className='flex flex-col relative w-full md:w-[300px] h-full'>
-        {/* <div className='flex flex-col  rounded-full  mx-auto items-center h-12 w-12 justify-center' style={{ background: "var(--primary-yellow)" }}>
-          <Icon
-            className={`text-2xl text-[#fff]`}
-            style={{ color: color }}
+    <div className='bg-white border border-gray-100 rounded-lg p-6 flex flex-col h-full'>
+      {/* Icon */}
+      {Icon && (
+        <div className='w-12 h-12 mb-4 text-[var(--primary-yellow)]'>
+          <Icon className='w-full h-full' />
+        </div>
+      )}
+
+      {/* Title */}
+      <h3 className='text-xl font-semibold text-black mb-2'>{service}</h3>
+
+      {/* Yellow accent line */}
+      <div className='w-10 h-1 bg-[var(--primary-yellow)] mb-4' />
+
+      {/* Description */}
+      <p className='text-gray-700 text-sm flex-grow leading-relaxed mb-4'>
+        {description}
+      </p>
+
+      {/* CTA */}
+      <div className='mt-auto flex items-center gap-2'>
+        <span className='text-sm font-medium text-black'>Explore Area</span>
+        <svg className='w-3 h-3 text-black' viewBox='0 0 14 14' fill='none'>
+          <path
+            d='M2 7h10M8 3l4 4-4 4'
+            stroke='currentColor'
+            strokeWidth='1.5'
+            strokeLinecap='round'
+            strokeLinejoin='round'
           />
-        </div> */}
-        <img src={img} alt=""  className='w-full  object-contain object-center'/>
-        <article className=' bg-white w-full absolute -bottom-4 left-0 md:-bottom-15 md:left-10 right-0 px-4 py-2 md:w-[300px] h-[120px]'>
-        <h4 className='  mt-4 font-bold text-[var(--primary-yellow)]'>
-          {service} 
-        </h4>
-        <p className=' mt-0 tracking-wide  text-sm text-[#6b7280]'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi sapiente dolores fuga, id repellendus 
-        </p>
-        </article>
+        </svg>
       </div>
     </div>
   )
 }
-export default ThematicAreas 
+
+export default ThematicAreas

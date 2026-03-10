@@ -19,41 +19,28 @@ export const BlogSlider = () => {
   }
 
   return (
-    <div className='flex flex-col '>
+    <div className='flex flex-col container mx-auto mt-12'>
       <div className='flex flex-col md:flex-row mx-4 md:mx-12 items-center justify-between'>
-        <h2 className='text-2xl font-bold capitalize'>Explore our latest insight</h2>
-        <div className='flex gap-2 ml-auto'>
-          <button
-            onClick={handlePrev}
-            className='px-3 py-1 bg-[var(--primary-blue)] text-[#fff] rounded hover:bg-gray-300'
-          >
-            Prev
-          </button>
-          <button
-            onClick={handleNext}
-            className='px-3 py-1 bg-[var(--primary-blue)] text-[#fff] rounded hover:bg-gray-300'
-          >
-            Next
-          </button>
-        </div>
+        <h2 className='text-2xl font-bold capitalize'>
+          Explore our latest insight
+        </h2>
       </div>
       <div className='flex mt-4'>
-        <div
-          ref={scrollRef}
-          className='overflow-x-auto overflow-y-hidden no-scrollbar'
-        >
-          <div className='flex gap-4 py-2 md:py-6'>
-            {blogs.map((blog, index) => (
-              <BlogCard 
-                key={index}
-                id={blog.id}
-                image={blog.image}
-                description={blog.description}
-                name={blog.name}
-                variant='slider'
-              />
-            ))}
-          </div>
+        <div className='flex gap-4 py-2 md:py-6 mx-auto justify-center'>
+          {
+            blogs
+              .map((blog, index) => (
+                <BlogCard
+                  key={index}
+                  id={blog.id}
+                  image={blog.image}
+                  description={blog.description}
+                  name={blog.name}
+                  variant='slider'
+                />
+              ))
+              .slice(0, 4) /* Show only the first 5 blogs for the slider */
+          }
         </div>
       </div>
     </div>
