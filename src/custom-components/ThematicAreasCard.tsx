@@ -11,10 +11,10 @@ const ThematicAreas = ({
 }) => {
   return (
     <div className='bg-white border border-gray-100 rounded-lg p-6 flex flex-col h-full'>
-      {/* Icon */}
+      {/* Icon with yellow background */}
       {Icon && (
-        <div className='w-12 h-12 mb-4 text-[var(--primary-yellow)]'>
-          <Icon className='w-full h-full' />
+        <div className='w-12 h-12 mb-5 bg-[var(--secondary-yellow)] flex items-center justify-center shrink-0'>
+          <Icon className='w-6 h-6 text-[var(--primary-yellow)]' />
         </div>
       )}
 

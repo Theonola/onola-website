@@ -8,28 +8,28 @@ import { BlogSlider } from '@/custom-components/BlogSlider'
 // import EventCardContainer from '@/custom-components/EventContainer'
 // import Slider from '@/custom-components/BackgroundImageSlider'
 import MissionVisionSlider from '@/custom-components/MissionVissionComponent'
-import ImpactSection from '@/custom-components/ImpactSection'
+// import ImpactSection from '@/custom-components/ImpactSection'
 function Home() {
   // const [imgLoaded, setImgLoaded] = useState(false)
 
   return (
     <>
-      <div>
+      <div className='pb-20'>
         <Hero />
       </div>
-      <div>
+      <div className='py-20'>
         <AboutComponent />
       </div>
-      <div className='py-12'>
+      <div className='py-20'>
         <ThematicAreasContainer />
       </div>
-      <div className='py-12'>
+      <div className='py-20'>
         <MissionVisionSlider />
       </div>
-      <div className='py-12'>
+      {/* <div className='py-20'>
         <ImpactSection />
-      </div>
-      <div>
+      </div> */}
+      <div className='py-20'>
         <BlogSlider />
       </div>
     </>

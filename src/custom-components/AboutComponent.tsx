@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const AboutComponent = () => {
   return (
-    <section className='bg-white'>
+    <section className='bg-white '>
       <div className='flex flex-col md:flex-row w-full min-h-[460px]'>
         {/* IMAGE — left half, controlled height */}
         <div className='w-full md:w-1/2 h-[300px] md:h-auto max-h-[460px] overflow-hidden'>
