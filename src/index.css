@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -74,6 +74,9 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --primary-yellow: #fcb817;
+  --secondary-yellow: #fef1d0;
+  --gray-light: #f2f2f2;
 }
 
 .dark {
@@ -110,6 +113,18 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -117,4 +132,70 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-12;
+}
+
+h3 {
+  @apply text-xl md:text-2xl  font-semibold  leading-tight mb-4;
+}
+
+h2 {
+  @apply text-2xl md:text-3xl font-bold  leading-snug mb-3;
+}
+
+h1 {
+  @apply text-2xl md:text-4xl font-bold  leading-snug mb-2;
+}
+
+.paragraph {
+  @apply text-base md:text-lg text-gray-700 leading-relaxed mb-2;
+}
+
+/* Fade + rise */
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Bars grow upward */
+@keyframes growBar {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+/* Floating card effect */
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Utility classes */
+.animate-riseIn {
+  animation: riseIn 0.8s ease-out forwards;
+}
+
+.animate-growBar {
+  transform-origin: bottom;
+  animation: growBar 0.8s ease-out forwards;
+}
+
+.animate-floatSoft {
+  animation: floatSoft 4s ease-in-out infinite;
 }
