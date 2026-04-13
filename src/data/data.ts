@@ -6,13 +6,11 @@ export const links = [
 ]
 
 import {
-  FaWater,
   FaClinicMedical,
   FaTrashAlt,
   FaBook,
   FaBus,
   FaSeedling,
-  FaAppleAlt,
 } from 'react-icons/fa'
 import { FaHandHoldingWater } from 'react-icons/fa'
 

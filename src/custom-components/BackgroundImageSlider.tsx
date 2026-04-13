@@ -81,7 +81,7 @@ const BackgroundImageSlider: React.FC = () => {
 
   return (
     <div
-      className="relative w-full h-[80vh] md:h-[90vh] overflow-hidden rounded-2xl shadow-lg"
+      className='relative w-full h-[80vh] md:h-[90vh] overflow-hidden rounded-2xl shadow-lg'
       onMouseEnter={() => {
         setPaused(true)
         stopAutoplay()
@@ -93,7 +93,7 @@ const BackgroundImageSlider: React.FC = () => {
     >
       {/* Current (visible behind) */}
       <div
-        className="absolute inset-0 w-full h-full bg-center bg-cover z-0 transition-transform duration-1000 ease-in-out"
+        className='absolute inset-0 w-full h-full bg-center bg-cover z-0 transition-transform duration-1000 ease-in-out'
         style={{ backgroundImage: `url(${hero[current].img})` }}
         aria-hidden
       />
@@ -108,46 +108,40 @@ const BackgroundImageSlider: React.FC = () => {
       />
 
       {/* Dim overlay for readability */}
-      <div className="absolute inset-0 bg-black/30 z-20" />
+      <div className='absolute inset-0 bg-black/30 z-20' />
 
       {/* Content overlay — show content for the current slide */}
-      <div className="absolute inset-0 flex items-center justify-start px-6 md:px-16 lg:px-24 z-30">
-        <div className="max-w-2xl">
-          <h2 className="text-white text-3xl md:text-5xl font-bold mb-4">
+      <div className='absolute inset-0 flex items-center justify-start px-6 md:px-16 lg:px-24 z-30'>
+        <div className='max-w-2xl'>
+          <h2 className='text-white text-3xl md:text-5xl font-bold mb-4'>
             {hero[current].title}
           </h2>
-          <p className="text-white/90 mb-6">{hero[current].description}</p>
-          <a
-            href={hero[current].link ?? '#'}
-            className="inline-block bg-white text-gray-900 px-5 py-2 rounded-md font-semibold hover:opacity-90 transition-opacity duration-300 ease-in-out"
-          >
-            Learn more
-          </a>
+          <p className='text-white/90 mb-6'>{hero[current].description}</p>
         </div>
       </div>
 
       {/* Controls */}
       <button
-        aria-label="previous"
+        aria-label='previous'
         onClick={triggerPrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-40 bg-black/40 text-white p-2 rounded hover:bg-black/60 transition-all duration-300 ease-in-out"
+        className='absolute left-4 top-1/2 transform -translate-y-1/2 z-40 bg-black/40 text-white p-2 rounded hover:bg-black/60 transition-all duration-300 ease-in-out'
       >
         <FaChevronLeft />
       </button>
       <button
-        aria-label="next"
+        aria-label='next'
         onClick={triggerNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-40 bg-black/40 text-white p-2 rounded hover:bg-black/60 transition-all duration-300 ease-in-out"
+        className='absolute right-4 top-1/2 transform -translate-y-1/2 z-40 bg-black/40 text-white p-2 rounded hover:bg-black/60 transition-all duration-300 ease-in-out'
       >
         <FaChevronRight />
       </button>
 
       {/* Dots + counter */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40 flex items-center gap-4">
-        <div className="text-white/90 text-sm">
+      <div className='absolute bottom-6 left-1/2 transform -translate-x-1/2 z-40 flex items-center gap-4'>
+        <div className='text-white/90 text-sm'>
           {current + 1} / {length}
         </div>
-        <div className="flex gap-2">
+        <div className='flex gap-2'>
           {hero.map((_, idx) => (
             <button
               key={idx}
