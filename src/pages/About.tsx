@@ -10,7 +10,7 @@ const About = () => {
         <AboutHero />
       </div>
       <div>
-        <Capabilities />
+        <Capabilities page='about' />
       </div>
       <div>
         <CoreValues />

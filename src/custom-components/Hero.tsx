@@ -12,9 +12,9 @@ const HeroOnola = () => {
   return (
     <section className='bg-[#fafaf9]  pt-28 pb-32'>
       <div className='max-w-6xl mx-auto px-6'>
-        <div className='grid md:grid-cols-2 gap-16 items-center'>
-          {/* LEFT CONTENT */}
-          <div>
+        <div className='flex flex-col md:grid md:grid-cols-2 gap-16 items-center'>
+          {/* LEFT CONTENT - Desktop */}
+          <div className='order-2 md:order-1 hidden md:block'>
             {/* Institutional Label */}
             <div
               className='flex items-center gap-3 mb-6'
@@ -26,7 +26,7 @@ const HeroOnola = () => {
             >
               <span className='w-6 h-[2px] bg-[var(--primary-yellow)]' />
               <p className='uppercase text-[11px] tracking-[0.22em] text-gray-400 font-medium'>
-                Independent Policy & Reform Institute
+                Locally Grounded. Results-Driven.
               </p>
             </div>
 
@@ -39,18 +39,15 @@ const HeroOnola = () => {
               }}
             >
               <h1 className='text-4xl md:text-5xl font-bold text-black leading-[1.1] tracking-tight'>
-                Turning Policy Into
-                <br />
-                <span className='relative inline-block mt-1'>
-                  Measurable Reform
-                  <span
-                    className='absolute left-0 -bottom-2 h-[3px] bg-[var(--primary-yellow)]'
-                    style={{
-                      width: visible ? '100%' : '0%',
-                      transition: 'width 1s ease 1s',
-                    }}
-                  />
-                </span>
+                The <span className='text-[var(--primary-yellow)]'>Onola</span>{' '}
+                Institute
+                <span
+                  className='absolute left-0 -bottom-2 h-[3px] bg-[var(--primary-yellow)]'
+                  style={{
+                    width: visible ? '70%' : '0%',
+                    transition: 'width 1s ease 1s',
+                  }}
+                />
               </h1>
             </div>
 
@@ -90,7 +87,7 @@ const HeroOnola = () => {
 
           {/* RIGHT VISUAL */}
           <div
-            className='relative'
+            className='relative order-1 md:order-2'
             style={{
               opacity: visible ? 1 : 0,
               transform: visible ? 'translateY(0)' : 'translateY(28px)',
@@ -103,7 +100,43 @@ const HeroOnola = () => {
               className='w-full h-[520px] object-cover'
             />
 
-            {/* Yellow accent border strip */}
+            {/* Gradient overlay for text readability */}
+            <div className='absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent md:hidden' />
+
+            {/* Mobile Text Overlay */}
+            <div className='absolute bottom-0 left-0 right-0 p-6 text-white md:hidden'>
+              {/* Institutional Label */}
+              <div className='flex items-center gap-3 mb-4'>
+                <span className='w-6 h-[2px] bg-[var(--primary-yellow)]' />
+                <p className='uppercase text-[10px] tracking-[0.22em] text-white font-medium'>
+                  Locally Grounded. Results-Driven.
+                </p>
+              </div>
+
+              {/* Headline */}
+              <h1 className='text-3xl font-bold text-white leading-[1.1] tracking-tight mb-4 drop-shadow-lg'>
+                The <span className='text-[var(--primary-yellow)]'>Onola</span>{' '}
+                Institute
+              </h1>
+
+              {/* Description */}
+              <p className='text-white max-w-md leading-relaxed text-sm mb-6 drop-shadow-md'>
+                Onola works alongside governments and institutions to design and
+                implement practical reforms that strengthen public systems,
+                accelerate economic transformation, and deliver sustainable
+                impact.
+              </p>
+
+              {/* CTAs */}
+              <div className='flex gap-3'>
+                <button className='bg-[var(--primary-yellow)] text-black px-5 py-2 text-xs font-bold uppercase tracking-widest hover:opacity-90 transition'>
+                  Our Work
+                </button>
+                <button className='border border-white text-white px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300'>
+                  Research & Insights
+                </button>
+              </div>
+            </div>
             <div
               className='absolute top-0 right-0 w-[4px] bg-[var(--primary-yellow)]'
               style={{
@@ -113,7 +146,7 @@ const HeroOnola = () => {
             />
 
             {/* Impact Card */}
-            <div
+            {/* <div
               className='absolute -bottom-10 -left-6 bg-white border-t-4 border-[var(--primary-yellow)] shadow-xl p-6 w-56'
               style={{
                 opacity: visible ? 1 : 0,
@@ -131,7 +164,7 @@ const HeroOnola = () => {
               <p className='text-[13px] text-gray-500 mt-3 leading-snug'>
                 National reform initiatives supported across the continent
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

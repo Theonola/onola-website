@@ -1,21 +1,4 @@
-const slides = [
-  {
-    label: 'Our Mission',
-    title: 'Driving Practical Reform',
-    text: `We support governments and institutions to design and implement
-    practical reforms that strengthen public systems and deliver measurable impact.`,
-    image:
-      'https://media.istockphoto.com/id/2218333140/photo/smiling-professionals-engaged-in-a-lively-team-discussion-in-bright-office-setting.webp?a=1&b=1&s=612x612&w=0&k=20&c=VH0vif57FLckXttCszHsvCgyjtq_arWxg4seHGQ6EcI=',
-  },
-  {
-    label: 'Our Vision',
-    title: 'Institutions That Work for People',
-    text: `A world where public institutions operate effectively, inclusively,
-    and sustainably to improve lives and accelerate national development.`,
-    image:
-      'https://media.istockphoto.com/id/2218333140/photo/smiling-professionals-engaged-in-a-lively-team-discussion-in-bright-office-setting.webp?a=1&b=1&s=612x612&w=0&k=20&c=VH0vif57FLckXttCszHsvCgyjtq_arWxg4seHGQ6EcI=',
-  },
-]
+import { slides } from '@/data/data'
 
 const MissionVision = () => {
   return (
@@ -79,7 +62,7 @@ const MissionVision = () => {
                 </p>
 
                 {/* CTA */}
-                <div className='flex items-center gap-2'>
+                {/* <div className='flex items-center gap-2'>
                   <span
                     className={`text-[11px] font-bold uppercase tracking-widest ${
                       isDark ? 'text-[var(--primary-yellow)]' : 'text-black'
@@ -102,7 +85,7 @@ const MissionVision = () => {
                       strokeLinejoin='round'
                     />
                   </svg>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

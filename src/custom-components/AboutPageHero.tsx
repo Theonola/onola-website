@@ -128,7 +128,7 @@ const AboutHero = () => {
             <div className='absolute top-0 right-0 w-[4px] h-full bg-[var(--primary-yellow)] z-20' />
 
             {/* Stat card */}
-            <div
+            {/* <div
               className='absolute -bottom-10 -left-6 bg-white border-t-4 border-[var(--primary-yellow)] shadow-xl p-6 w-56 z-20'
               style={{
                 opacity: visible ? 1 : 0,
@@ -145,7 +145,7 @@ const AboutHero = () => {
               <p className='text-[13px] text-gray-500 mt-3 leading-snug'>
                 Driving policy reform across Africa and beyond
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

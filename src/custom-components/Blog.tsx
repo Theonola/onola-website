@@ -20,20 +20,20 @@ const BlogCard = ({
   return (
     <Link
       to={`/insight/${id}`}
-      className='group flex flex-col w-full cursor-pointer transition-all duration-300 shadow-sm hover:shadow-lg  overflow-hidden bg-white'
+      className='group flex flex-col w-full cursor-pointer'
     >
-      {/* Image — no padding */}
-      <div className='w-full overflow-hidden mb-4'>
+      {/* Image — no border, clean ratio */}
+      <div className='w-full overflow-hidden mb-5 aspect-[16/10]'>
         <img
           src={image}
           alt={name}
-          className='w-full h-[220px] object-cover transition-transform duration-500 group-hover:scale-105'
+          className='w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105'
         />
       </div>
 
-      {/* Text content — padded independently */}
+      {/* Content */}
       <div className='px-4 py-3 flex flex-col gap-2'>
-        {/* Meta — category + date */}
+        {/* Meta */}
         <div className='flex items-center gap-2'>
           {category && (
             <span className='text-[10px] font-bold uppercase tracking-widest text-[var(--primary-yellow)]'>
@@ -58,12 +58,15 @@ const BlogCard = ({
         )}
 
         {/* Title */}
-        <h4 className='text-base font-semibold text-black leading-snug group-hover:text-[var(--primary-yellow)] transition-colors duration-300'>
+        <h4 className='text-base font-bold text-black leading-snug tracking-tight group-hover:text-[var(--primary-yellow)] transition-colors duration-300'>
           {name}
         </h4>
 
+        {/* Yellow rule */}
+        <div className='w-8 h-[2px] bg-[var(--primary-yellow)] transition-all duration-300 group-hover:w-12' />
+
         {/* Description */}
-        <p className='text-sm text-gray-500 leading-relaxed line-clamp-3'>
+        <p className='text-[14px] text-gray-500 leading-relaxed line-clamp-3'>
           {description}
         </p>
 

@@ -30,7 +30,7 @@ const ThematicAreas = ({
       </p>
 
       {/* CTA */}
-      <div className='mt-auto flex items-center gap-2'>
+      {/* <div className='mt-auto flex items-center gap-2'>
         <span className='text-sm font-medium text-black'>Explore Area</span>
         <svg className='w-3 h-3 text-black' viewBox='0 0 14 14' fill='none'>
           <path
@@ -41,7 +41,7 @@ const ThematicAreas = ({
             strokeLinejoin='round'
           />
         </svg>
-      </div>
+      </div> */}
     </div>
   )
 }

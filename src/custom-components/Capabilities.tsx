@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
-import storyImg from '../assets/health.jpg'
+import storyImg from '../assets/skills.jpg'
 
-const OurStory = () => {
+const OurStory = (page: { page: string }) => {
   const [visible, setVisible] = useState(false)
   const ref = useRef<HTMLElement>(null)
 
@@ -26,24 +26,30 @@ const OurStory = () => {
   })
 
   return (
-    <section ref={ref} className='bg-white py-24'>
+    <section ref={ref} className='bg-white py-'>
       <div className='max-w-6xl mx-auto px-6'>
         {/* ── HEADER ── */}
         <div className='max-w-2xl mb-16'>
           <div className='flex items-center gap-3 mb-5' style={fadeUp(0.1)}>
             <span className='w-6 h-[2px] bg-[var(--primary-yellow)]' />
-            <p className='uppercase text-[11px] tracking-[0.22em] text-gray-400 font-medium'>
-              Our Story
-            </p>
+            {page.page === 'home' ? (
+              <p className='uppercase text-[11px] tracking-[0.22em] text-gray-400 font-medium'>
+                Our Impact
+              </p>
+            ) : (
+              <p className='uppercase text-[11px] tracking-[0.22em] text-gray-400 font-medium'>
+                Our Story
+              </p>
+            )}
           </div>
           <h2
             className='text-4xl md:text-5xl font-bold text-black leading-[1.05] tracking-tight'
             style={fadeUp(0.2)}
           >
-            We started small.
+            Results from
             <br />
             <span className='relative inline-block mt-1'>
-              The problems didn't.
+              the Onola Approach
               <span
                 className='absolute left-0 -bottom-2 h-[3px] bg-[var(--primary-yellow)]'
                 style={{
@@ -68,11 +74,11 @@ const OurStory = () => {
               className='w-full h-full object-cover object-center'
             />
             {/* Year badge */}
-            <div className='absolute top-6 left-6 bg-[var(--primary-yellow)] px-4 py-2'>
+            {/* <div className='absolute top-6 left-6 bg-[var(--primary-yellow)] px-4 py-2'>
               <p className='text-[11px] font-bold uppercase tracking-widest text-black'>
                 Est. 2017
               </p>
-            </div>
+            </div> */}
           </div>
 
           {/* TEXT — 2 cols, black bg */}
@@ -80,17 +86,31 @@ const OurStory = () => {
             className='md:col-span-2 bg-black flex flex-col justify-center px-10 py-14'
             style={fadeUp(0.35)}
           >
-            <p className='text-white/80 text-[15px] leading-[1.9] mb-6'>
-              Onola was founded by a team of policy practitioners who had spent
-              years inside government — close enough to see the gap between what
-              was written and what was delivered.
-            </p>
-
-            <p className='text-white/60 text-[14px] leading-[1.85] mb-10'>
-              We built Onola to close that gap. Not with more reports, but with
-              hands-on reform support that stays until the work is done and the
-              results are real.
-            </p>
+            {page.page === 'home' ? (
+              <p className='text-white/80 text-[15px] leading-[1.9] mb-6'>
+                {}
+                The Onola team raised WAEC school leaving exam success rates in
+                Lagos state from 7% to 49%, trained young people to run urban
+                farms, installed streetlights that doubled market incomes and
+                extended commercial operations, restructured clinics for
+                extended care, and launched Africa’s first BRT system, serving
+                over 200,000 daily commuters.
+              </p>
+            ) : (
+              <p className='text-white/80 text-[15px] leading-[1.9] mb-6'>
+                {}
+                Onola is founded on a simple but powerful conviction: Nigeria’s
+                most urgent challenges can only be solved by those who
+                understand them deeply, have lived them directly, and have
+                already delivered real solutions. As a locally-grounded
+                organization, Onola bridges the gap between policy and the
+                community, driven by local expertise and a commitment to
+                meaningful impact. It is led by practitioners who have not only
+                imagined solutions but implemented them, seasoned reformers with
+                a proven track record in governance, public service delivery,
+                and infrastructure transformation.
+              </p>
+            )}
 
             {/* Quote */}
             <div className='border-l-[3px] border-[var(--primary-yellow)] pl-5 mb-10'>
@@ -105,7 +125,7 @@ const OurStory = () => {
             </div>
 
             {/* Stats row */}
-            <div className='grid grid-cols-3 gap-4 border-t border-white/10 pt-8'>
+            {/* <div className='grid grid-cols-3 gap-4 border-t border-white/10 pt-8'>
               {[
                 { value: '7+', label: 'Years' },
                 { value: '12+', label: 'Countries' },
@@ -127,7 +147,7 @@ const OurStory = () => {
                   </p>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

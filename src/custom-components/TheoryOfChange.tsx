@@ -1,35 +1,5 @@
+import { steps } from '@/data/data'
 import { useEffect, useRef, useState } from 'react'
-
-const steps = [
-  {
-    number: '01',
-    title: 'Understand the Context',
-    body: 'We begin by listening — to governments, communities, and data. Every reform starts with a clear-eyed diagnosis of what is broken and why.',
-    image:
-      'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=800&auto=format&fit=crop&q=80',
-  },
-  {
-    number: '02',
-    title: 'Design the Pathway',
-    body: 'Together with our partners, we design reform pathways that are practical, evidence-based, and built for the realities on the ground.',
-    image:
-      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&auto=format&fit=crop&q=80',
-  },
-  {
-    number: '03',
-    title: 'Deliver & Adapt',
-    body: 'We stay through implementation — adjusting as conditions change, troubleshooting in real time, and keeping reform on track.',
-    image:
-      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&auto=format&fit=crop&q=80',
-  },
-  {
-    number: '04',
-    title: 'Build What Lasts',
-    body: 'We invest in local capacity so that institutions can sustain reform long after our engagement ends. The goal is never dependency — it is ownership.',
-    image:
-      'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&auto=format&fit=crop&q=80',
-  },
-]
 
 const TheoryOfChange = () => {
   const [visible, setVisible] = useState(false)

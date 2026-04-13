@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/Onola-Institute-white.png'
+import { links } from '@/data/data'
 
 const Footer = () => {
   const quickLinks = [
@@ -58,13 +59,13 @@ const Footer = () => {
           </div>
           <div className='flex flex-wrap gap-4 shrink-0'>
             <Link
-              to='/contact'
+              to='#'
               className='bg-[var(--primary-yellow)] text-black px-8 py-3.5 text-[11px] font-bold uppercase tracking-widest hover:opacity-90 transition-opacity duration-300'
             >
               Get In Touch
             </Link>
             <Link
-              to='/work'
+              to='#'
               className='border border-white/30 text-white px-8 py-3.5 text-[11px] font-bold uppercase tracking-widest hover:border-white transition-colors duration-300'
             >
               Our Work
@@ -113,11 +114,11 @@ const Footer = () => {
               </p>
             </div>
             <ul className='flex flex-col gap-3'>
-              {quickLinks.map((link) => (
+              {links.map((link) => (
                 <li key={link.name}>
                   <Link
-                    to={link.path}
-                    className='text-[14px] text-gray-400 hover:text-[var(--primary-yellow)] transition-colors duration-300 flex items-center gap-2 group'
+                    to={link.url}
+                    className='text-[14px] text-gray-400 hover:text-[var(--primary-yellow)] transition-colors duration-300 flex items-center gap-2 group capitalize'
                   >
                     <span className='w-0 group-hover:w-3 h-[1px] bg-[var(--primary-yellow)] transition-all duration-300' />
                     {link.name}
