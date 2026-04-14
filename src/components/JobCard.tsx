@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job }: { job: any }) => {
   const [open, setOpen] = useState(false)
 
   return (
@@ -39,7 +39,7 @@ const JobCard = ({ job }) => {
 
       {/* HIGHLIGHTS (compact) */}
       <ul className='mt-4 space-y-1 text-gray-600 text-xs'>
-        {job.highlights.slice(0, 3).map((item, i) => (
+        {job.highlights.slice(0, 3).map((item: string, i: number) => (
           <li key={i}>• {item}</li>
         ))}
       </ul>
@@ -61,7 +61,7 @@ const JobCard = ({ job }) => {
               Requirements
             </h4>
             <ul className='space-y-1 text-xs text-gray-600'>
-              {job.requirements.map((item, i) => (
+              {job.requirements.map((item: string, i: number) => (
                 <li key={i}>• {item}</li>
               ))}
             </ul>
@@ -73,7 +73,7 @@ const JobCard = ({ job }) => {
               Responsibilities
             </h4>
             <ul className='space-y-1 text-xs text-gray-600'>
-              {job.responsibilities.map((item, i) => (
+              {job.responsibilities.map((item: string, i: number) => (
                 <li key={i}>• {item}</li>
               ))}
             </ul>

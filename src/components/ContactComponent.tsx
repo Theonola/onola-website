@@ -108,7 +108,6 @@ const ContactSection = () => {
               </label>
               <textarea
                 name='message'
-                rows='4'
                 value={form.message}
                 onChange={handleChange}
                 className='w-full border-b border-gray-300 focus:border-black outline-none py-2 bg-transparent resize-none transition'
