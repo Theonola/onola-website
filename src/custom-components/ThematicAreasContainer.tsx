@@ -4,8 +4,8 @@ import ThematicAreas from '@/custom-components/ThematicAreasCard'
 
 const ThematicAreasContainer = () => {
   return (
-    <section className='bg-black py-24'>
-      <div className='max-w-6xl mx-auto px-6'>
+    <section className='bg-black '>
+      <div className='max-w-6xl mx-auto px-6 py-24'>
         {/* Section Header */}
         <div className='text-center mb-16'>
           <div className='flex items-center justify-center gap-3 mb-4'>
