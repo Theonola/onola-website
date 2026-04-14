@@ -1,8 +1,9 @@
 export const links = [
   { id: 1, name: 'home', url: '/' },
-  { id: 2, name: 'about', url: '#' },
-  { id: 3, name: 'contact', url: '#' },
-  { id: 4, name: 'insight', url: '#' },
+  { id: 2, name: 'about', url: '/about' },
+  { id: 3, name: 'contact', url: '/contact' },
+  { id: 4, name: 'careers', url: '/careers' },
+  // { id: 5, name: 'insight', url: '/insight' },
 ]
 
 import {
@@ -478,5 +479,45 @@ export const slides = [
     title: 'Institutions That Work for People',
     text: `A Nigeria where every community has access to essential services, opportunities to thrive, and pathways to human development, guided by evidence-based interventions and locally-driven solutions.`,
     image: '/assets/vission-image.jpg',
+  },
+]
+
+export const jobs = [
+  {
+    id: 1,
+    title: 'Programme Coordinator',
+    location: 'Lagos, Nigeria',
+    experience: 'Minimum 5 years experience',
+    deadline: 'May 1, 2026',
+    email: 'onolasocials@gmail.com',
+
+    summary:
+      'The Programme Coordinator will support the rollout of Onola’s programmes, partnerships, and resource mobilisation efforts. This role offers the opportunity to contribute to organisational systems, strategy execution, and long-term impact delivery.',
+
+    highlights: [
+      'Coordinate execution of programmes and strategic initiatives',
+      'Translate strategy into actionable workplans and timelines',
+      'Support partnerships, stakeholder engagement, and fundraising efforts',
+      'Develop high-quality proposals, reports, and policy content',
+    ],
+
+    requirements: [
+      'Bachelor’s degree in Social Sciences, Public Policy, Business Administration, or related field',
+      'Minimum of 5 years experience in programme coordination, consulting, or project management',
+      'Strong writing and analytical skills (policy briefs, proposals, reports)',
+      'Experience in fast-paced or high-ownership environments is an advantage',
+    ],
+
+    responsibilities: [
+      'Lead coordination and execution of programmes and priority initiatives',
+      'Develop implementation frameworks, timelines, and performance milestones',
+      'Track programme performance and produce analytical reports',
+      'Support resource mobilisation through proposals and donor engagement',
+      'Manage stakeholder relationships and partnerships',
+      'Maintain programme documentation and internal tracking systems',
+      'Identify risks, bottlenecks, and opportunities for improvement',
+    ],
+
+    jd: '/JD/The Onola Institute_Programme Coordinator Job Description.pdf',
   },
 ]

@@ -30,7 +30,7 @@ const TheoryOfChange = () => {
   }
 
   return (
-    <section ref={ref} className='bg-white py-24'>
+    <section ref={ref} className='bg-white '>
       <div className='max-w-6xl mx-auto px-6'>
         {/* ── HEADER ── */}
         <div

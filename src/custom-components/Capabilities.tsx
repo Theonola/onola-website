@@ -26,7 +26,7 @@ const OurStory = (page: { page: string }) => {
   })
 
   return (
-    <section ref={ref} className='bg-white py-'>
+    <section ref={ref} className='bg-white '>
       <div className='max-w-6xl mx-auto px-6'>
         {/* ── HEADER ── */}
         <div className='max-w-2xl mb-16'>
