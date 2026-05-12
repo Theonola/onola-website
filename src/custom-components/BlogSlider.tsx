@@ -19,20 +19,16 @@ export const BlogSlider = () => {
         </h2>
       </div>
       <div className='flex mt-4'>
-        <div className='flex gap-4 py-2 md:py-6 mx-auto justify-center'>
-          {
-            blogs
-              .map((blog, index) => (
-                <BlogCard
-                  key={index}
-                  id={blog.id}
-                  image={blog.image}
-                  description={blog.description}
-                  name={blog.name}
-                />
-              ))
-              .slice(0, 4) /* Show only the first 5 blogs for the slider */
-          }
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 py-2 md:py-6 mx-auto'>
+          {blogs.slice(0, 4).map((blog, index) => (
+            <BlogCard
+              key={index}
+              id={blog.id}
+              image={blog.image}
+              description={blog.description}
+              name={blog.name}
+            />
+          ))}
         </div>
       </div>
     </div>

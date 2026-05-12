@@ -3,7 +3,7 @@ export const links = [
   { id: 2, name: 'about', url: '/about' },
   { id: 3, name: 'contact', url: '/contact' },
   { id: 4, name: 'careers', url: '/careers' },
-  // { id: 5, name: 'insight', url: '/insight' },
+  { id: 5, name: 'insights', url: '/insight' },
 ]
 
 import {
@@ -189,73 +189,13 @@ export const services = [
 export const blogs = [
   {
     id: 1,
-    name: 'The Ultimate Guide to Event Planning',
+    name: 'Addressing Urbanization and Urban Challenges in Lagos',
     description:
-      "Discover key strategies and tools to plan a successful event, whether it's a wedding, conference, or birthday bash.",
-    image: '/assets/event-1.jpg',
-  },
-  {
-    id: 2,
-    name: 'How to Maximize Engagement at Your Events',
-    description:
-      'Learn how to boost audience participation and create memorable experiences that keep people coming back.',
-    image: '/assets/event-12.jpg',
-  },
-  {
-    id: 3,
-    name: 'Top 10 Event Themes That Never Fail',
-    description:
-      'Stuck on ideas? These crowd-pleasing event themes are sure to inspire your next big gathering.',
-    image: '/assets/event-3.jpg',
-  },
-  {
-    id: 4,
-    name: 'Mastering the Art of Virtual Events',
-    description:
-      'Tips and tools for hosting seamless and engaging online events that rival in-person experiences.',
-    image: '/assets/event-4.jpg',
-  },
-  {
-    id: 5,
-    name: 'Behind the Scenes of a Music Festival',
-    description:
-      'Take a look at the logistics and planning that go into making a large-scale music festival run smoothly.',
-    image: '/assets/event-5.jpg',
-  },
-  {
-    id: 6,
-    name: 'Eco-Friendly Event Planning Tips',
-    description:
-      'Explore how to host sustainable events without compromising on style or experience.',
-    image: '/assets/event-6.jpg',
-  },
-  {
-    id: 7,
-    name: 'Event Marketing: What Actually Works?',
-    description:
-      'From social media to email campaigns, discover the most effective ways to promote your events.',
-    image: '/assets/event-7.jpg',
-  },
-  {
-    id: 8,
-    name: 'Catering Ideas Your Guests Will Love',
-    description:
-      'From finger foods to gourmet spreads, these catering ideas are sure to impress at any event.',
-    image: '/assets/event-8.jpg',
-  },
-  {
-    id: 9,
-    name: 'Post-Event Follow-Up Strategies',
-    description:
-      'Learn how to retain attendees and collect valuable feedback after your event ends.',
-    image: '/assets/event-9.jpg',
-  },
-  {
-    id: 10,
-    name: 'Budgeting for Success: Event Finance 101',
-    description:
-      'A practical guide to creating and managing your event budget for maximum impact and minimum stress.',
-    image: '/assets/event-10.jpg',
+      'The state of a city is the most reliable audit of its government. It reflects, without embellishment, the quality of its planning, the strength of its institutions, and the discipline with which policy is executed.',
+    image: '/assets/addressing.png',
+    article:
+      '/articles/A. Onola001- Addressing Urbanization and Urban Challenges in Lagos.pdf',
+    date: '12th May, 2025',
   },
 ]
 
