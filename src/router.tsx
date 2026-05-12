@@ -8,6 +8,7 @@ import {
   NotFound,
 } from './pages/Index'
 import App from './App'
+import Blog from './pages/Blog'
 
 const router = createBrowserRouter([
   {
@@ -17,11 +18,11 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'about', element: <About /> },
       { path: 'careers', element: <CareersPage /> },
-      { path: 'insight', element: <Blogs /> },
+      { path: 'insights', element: <Blogs /> },
+      { path: 'insights/:id', element: <Blog /> },
       { path: 'contact', element: <Contact /> },
     ],
   },
-  // { path: '/user/:id', element: <Profile /> },
   // { path: '/login', element: <Login /> },
   // { path: '/register', element: <Register /> },
   { path: '*', element: <NotFound /> },

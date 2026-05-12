@@ -19,7 +19,7 @@ const BlogCard = ({
 }) => {
   return (
     <Link
-      to={`/insight/${id}`}
+      to={`/insights/${id}`}
       className='group flex flex-col w-full cursor-pointer'
     >
       {/* Image — no border, clean ratio */}
