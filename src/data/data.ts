@@ -3,7 +3,7 @@ export const links = [
   { id: 2, name: 'about', url: '/about' },
   { id: 3, name: 'contact', url: '/contact' },
   { id: 4, name: 'careers', url: '/careers' },
-  { id: 5, name: 'insights', url: '/insight' },
+  { id: 5, name: 'insights', url: '/insights' },
 ]
 
 import {
